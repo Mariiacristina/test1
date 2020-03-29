@@ -5,7 +5,7 @@ import Header from './components/header';
 import Hero from './components/hero';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ContactUs from './containers/contactUs'
-import Posts from './containers/posts'
+import Post from './containers/posts'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Hero/>
         <Route path="/" exact component={Home}/>
         <Route path ="/contact-us" component ={ContactUs}/>
-        <Route path = "/posts" component = {Posts}/>
+        <Route path = "/post/:postId" component = {Post}/>
       </div>
     </Router>
 

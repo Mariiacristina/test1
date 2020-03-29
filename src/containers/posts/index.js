@@ -3,13 +3,14 @@ import './style.css';
 import BlogPost from '../../components/blogPost';
 import SideBar from '../../components/sidebar';
 
-const Posts = (props) => {
+const Post = (props) => {
+
   return (
     <section className = "container">
-      <BlogPost/>
+      <BlogPost {...props}/>
       <SideBar/>
     </section>
   )
 }
 
-export default Posts
+export default Post
