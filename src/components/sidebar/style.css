@@ -50,3 +50,20 @@ margin-bottom: 10px;
 .recentpostss{
   padding: 20px 0;
 }
+
+.postcontent{
+  margin: 10px;
+}
+
+.postcontent h3{
+  font-weight:400;
+  color: #333;
+}
+
+.postcontent p{
+  font-size: 14px;
+  color: #6c6c6c;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}

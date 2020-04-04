@@ -1,4 +1,5 @@
-import React,{useState,useEffect,NavLink} from 'react'
+import React,{useState,useEffect} from 'react'
+import {NavLink} from 'react-router-dom';
 import './style.css'
 import Card from '../UI/card'
 import blogPost from '../../data/blog.json'
@@ -10,10 +11,10 @@ const SideBar = (props) => {
   useEffect(()=>{
     const posts = blogPost.data;
     setPosts(posts);
-  },posts);
+  },[posts]);
 
   return (
-    <div className ="sidebarcontainer">
+    <div className ="sidebarcontainer" style={{width:props.width}}>
       <Card style = {{marginBottom: '20px',padding:'20px',boxSizing: 'border-box'}}>
         <div className = "cardheader">
           <span>About Us</span>
@@ -42,7 +43,7 @@ const SideBar = (props) => {
             {
               posts.map(post =>{
                 return(
-                  <NavLink to={`/post/${post.id}`}>
+                  <NavLink key={post.id} to={`/post/${post.slug}`}>
                     <div className = "recentposts">
                       <h3>{post.blogTitle}</h3>
                       <span>{post.postedOn}</span>
